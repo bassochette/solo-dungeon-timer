@@ -7,6 +7,7 @@ exports[`Home page matches snapshot 1`] = `
   >
     <p
       class="timer"
+      data-cy="timer"
     >
       90
     </p>
@@ -15,6 +16,7 @@ exports[`Home page matches snapshot 1`] = `
     >
       <img
         class="dungeon-img"
+        data-cy="open-dg"
         src="open-dg.png"
       />
     </div>
@@ -23,6 +25,7 @@ exports[`Home page matches snapshot 1`] = `
     >
       <div
         class="button start-button"
+        data-cy="start"
       >
         Start
       </div>
