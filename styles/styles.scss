@@ -14,7 +14,7 @@ body {
 
 @include XXL {
   body {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 
@@ -32,28 +32,26 @@ body {
 
 @include desktop {
   body {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
 @include tablet {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @include mobile {
   body {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
-#_next,
-.app {
+#_next {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 section,
@@ -65,3 +63,5 @@ div {
 .hidden {
   display: none !important;
 }
+
+@import 'home';

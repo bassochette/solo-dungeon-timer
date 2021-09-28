@@ -1,0 +1,64 @@
+@import 'colors';
+@import 'animations';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-background;
+  min-height: 100vh;
+  justify-content: space-evenly;
+}
+
+.timer {
+  font-size: xxx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+}
+
+.timer-end {
+  color: $danger;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.dungeon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dungeon-pulse {
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.dungeon-img {
+  max-height: 40vh;
+  animation: fadeIn 1s;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $higlight-text;
+  padding: 1em;
+  font-size: x-large;
+  border-radius: 8px;
+  box-shadow: 2px 2px 7px black;
+}
+
+.start-button {
+  background-color: $highlight-background-success;
+}
+
+.cancel-button {
+  background-color: $highlight-background-danger;
+}

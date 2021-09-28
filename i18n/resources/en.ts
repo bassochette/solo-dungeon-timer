@@ -1,15 +1,12 @@
 export const en = {
   translation: {
+    title: 'AO solo dungeon',
+    byWebeleon:
+      'Proudly built and maintained by Webeleon SARL from Brest in France',
     home: {
-      title: 'NextJs Typescript Template',
-      alt: {
-        coverage: 'Coverage Status',
-        prettier: 'Code style: prettier',
-        testAndCoverage: 'test and coverage',
-      },
-      useMeOnGithub: 'Use me on github!',
-      byWebeleon:
-        'Proudly built and maintained by Webeleon SARL from Brest in France',
+      'safe-to-go': 'Your dungeon is closed, you are safe to go!',
+      'start-button': 'Start',
+      'cancel-button': 'Cancel',
     },
     copyright: {
       header: 'Copyright 2020-{{end}} Webeleon SARL',

@@ -1,14 +1,11 @@
 export const fr = {
   translation: {
+    title: 'AO donjon solo',
+    byWebeleon: 'Dévellopé et maintenu avec amour par Webeleon SARL à Brest!',
     home: {
-      title: 'Template NextJS + Typescript',
-      alt: {
-        coverage: 'Status de la couverture de test',
-        prettier: 'Styliser avec prettier',
-        testAndCoverage: 'test et courverture',
-      },
-      useMeOnGithub: 'Utilise le template sur github!',
-      byWebeleon: 'Dévellopé et maintenu avec amour par Webeleon SARL à Brest!',
+      'safe-to-go': 'Le donjon est fermé, tu es en sécurité',
+      'start-button': 'Démarrer',
+      'stop-button': 'Annuler',
     },
     copyright: {
       header: 'Copyright 2020-{{end}} Webeleon SARL',

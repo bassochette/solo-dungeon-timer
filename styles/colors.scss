@@ -1,14 +1,10 @@
-$primary-text-color: #000000;
-$highlight-text-color: #91f3dc;
+$danger: #EA5F9D;
+$success: #00AAA1;
 
-$invert-text-color: #00465c;
-$invert-highlight-text-color: #6cb3a2;
+$primary-background: #EFEFDC;
+$primary-text-color: #5B424B;
 
-$shadows: #b2c6c2;
-$invert-shadows: #121d29;
+$highlight-background-success: $success;
+$highlight-background-danger: $danger;
+$higlight-text: #FFF3FB;
 
-$red-error: #b81515;
-$red-error-border: #caaca9;
-
-$ivory-light: #f5f2f5;
-$ivory: #efeaef;

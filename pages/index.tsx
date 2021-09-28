@@ -1,39 +1,62 @@
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+const DURATION = 90;
 
 export const Home = (): JSX.Element => {
   const { t } = useTranslation();
+  const [timer, setTimer] = useState(DURATION);
+  const [runningInterval, setRunningInterval] = useState<NodeJS.Timeout>();
+
+  const _start = useCallback(() => {
+    if (runningInterval) return;
+    setTimer(DURATION);
+    const int = setInterval(() => {
+      setTimer((timer) => {
+        if (timer <= 0) {
+          setRunningInterval(undefined);
+          return 0;
+        }
+        return timer - 1;
+      });
+    }, 1000);
+    setRunningInterval(int);
+  }, [timer, runningInterval]);
+
+  const _cancel = useCallback(() => {
+    if (runningInterval) clearInterval(runningInterval);
+    setTimer(DURATION);
+  }, [timer, runningInterval]);
 
   return (
     <div className="app">
-      <img src="/banner/banner.webp" alt="" />
-      <h1>{t('home.title')}</h1>
-      <div>
-        <img
-          src="https://coveralls.io/repos/github/Webeleon/Next-JS-starter-project/badge.svg?branch=main"
-          alt={t('home.alt.coverage')}
-        />
-        <img
-          src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"
-          alt={t('home.alt.prettier')}
-        />
-        <img
-          src="https://github.com/webeleon/Next-JS-starter-project/workflows/Test%20and%20coverage/badge.svg"
-          alt={t('home.alt.testAndCoverage')}
-        />
+      <p
+        className={`timer ${
+          timer <= 10 && timer !== 0 ? 'timer-end' : ''
+        }`.trim()}
+      >
+        {timer > 0 && timer}
+        {timer === 0 && t('home.safe-to-go')}
+      </p>
+      <div
+        className={`dungeon ${
+          timer <= 10 && timer !== 0 ? 'dungeon-pulse' : ''
+        }`}
+      >
+        {timer > 0 && <img src="open-dg.png" className="dungeon-img" />}
+        {timer === 0 && <img src="closed-dg.png" className="dungeon-img" />}
       </div>
-      <div>
-        <a href="https://github.com/Webeleon/Next-JS-starter-project">
-          {t('home.useMeOnGithub')}
-        </a>
-      </div>
-      <div>
-        <a href="https://webeleon.dev">{t('home.byWebeleon')}</a>
-      </div>
-      <div>
-        <p>{t('copyright.header', { end: new Date().getFullYear() })}</p>
-        <p>{t('copyright.permission')}</p>
-        <p>{t('copyright.condition')}</p>
-        <p>{t('copyright.warranty')}</p>
+      <div className="controls">
+        {!runningInterval && (
+          <div className="button start-button" onClick={_start}>
+            {t('home.start-button')}
+          </div>
+        )}
+        {runningInterval && (
+          <div className="button cancel-button" onClick={_cancel}>
+            {t('home.cancel-button')}
+          </div>
+        )}
       </div>
     </div>
   );
