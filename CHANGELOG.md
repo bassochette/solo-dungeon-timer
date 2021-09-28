@@ -4,18 +4,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.3.0](https://github.com/Webeleon/Next-JS-starter-project/compare/v2.2.0...v2.3.0) (2021-07-18)
 
-
 ### Features
 
-* add i18n ([31c0269](https://github.com/Webeleon/Next-JS-starter-project/commit/31c0269d4cfc7e0f07ddf21cfa0182db9d6cb065))
-
+- add i18n ([31c0269](https://github.com/Webeleon/Next-JS-starter-project/commit/31c0269d4cfc7e0f07ddf21cfa0182db9d6cb065))
 
 ### Bug Fixes
 
-* **deps:** update dependency @sendgrid/mail to v7.4.5 ([10e6ad4](https://github.com/Webeleon/Next-JS-starter-project/commit/10e6ad41037a78041964bf088d06116bc00738e7))
-* **deps:** update dependency sass to v1.35.2 ([87c1b07](https://github.com/Webeleon/Next-JS-starter-project/commit/87c1b07ada5441126d6c00a6d8bff3d9327c675c))
-* vercel build ([1051f79](https://github.com/Webeleon/Next-JS-starter-project/commit/1051f798186b78e61a05498c1bc2b8c6ab6154cc))
-* **deps:** update dependency sass to v1.35.0 ([ddfd876](https://github.com/Webeleon/Next-JS-starter-project/commit/ddfd876b92c65ab958c1d2c58e0945539642cd19))
+- **deps:** update dependency @sendgrid/mail to v7.4.5 ([10e6ad4](https://github.com/Webeleon/Next-JS-starter-project/commit/10e6ad41037a78041964bf088d06116bc00738e7))
+- **deps:** update dependency sass to v1.35.2 ([87c1b07](https://github.com/Webeleon/Next-JS-starter-project/commit/87c1b07ada5441126d6c00a6d8bff3d9327c675c))
+- vercel build ([1051f79](https://github.com/Webeleon/Next-JS-starter-project/commit/1051f798186b78e61a05498c1bc2b8c6ab6154cc))
+- **deps:** update dependency sass to v1.35.0 ([ddfd876](https://github.com/Webeleon/Next-JS-starter-project/commit/ddfd876b92c65ab958c1d2c58e0945539642cd19))
 
 ## [2.2.0](https://github.com/Webeleon/Next-JS-starter-project/compare/v2.1.3...v2.2.0) (2021-06-08)
 
