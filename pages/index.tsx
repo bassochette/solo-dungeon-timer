@@ -34,6 +34,7 @@ export const Home = (): JSX.Element => {
         className={`timer ${
           timer <= 10 && timer !== 0 ? 'timer-end' : ''
         }`.trim()}
+        data-cy="timer"
       >
         {timer > 0 && timer}
         {timer === 0 && t('home.safe-to-go')}
@@ -43,17 +44,29 @@ export const Home = (): JSX.Element => {
           timer <= 10 && timer !== 0 ? 'dungeon-pulse' : ''
         }`}
       >
-        {timer > 0 && <img src="open-dg.png" className="dungeon-img" />}
-        {timer === 0 && <img src="closed-dg.png" className="dungeon-img" />}
+        {timer > 0 && (
+          <img src="open-dg.png" data-cy="open-dg" className="dungeon-img" />
+        )}
+        {timer === 0 && (
+          <img
+            src="closed-dg.png"
+            data-cy="closed-dg"
+            className="dungeon-img"
+          />
+        )}
       </div>
       <div className="controls">
         {!runningInterval && (
-          <div className="button start-button" onClick={_start}>
+          <div className="button start-button" data-cy="start" onClick={_start}>
             {t('home.start-button')}
           </div>
         )}
         {runningInterval && (
-          <div className="button cancel-button" onClick={_cancel}>
+          <div
+            className="button cancel-button"
+            data-cy="cancel"
+            onClick={_cancel}
+          >
             {t('home.cancel-button')}
           </div>
         )}
