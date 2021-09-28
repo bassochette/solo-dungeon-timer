@@ -1,0 +1,26 @@
+image: node:16-alpine
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - lint
+  - test
+
+install_dependencies:
+  stage: build
+  script:
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+lint:
+  stage: lint
+  script: npm run lint
+
+testing:
+  stage: test
+  script:
+    - npm run test-all

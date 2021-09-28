@@ -1,0 +1,85 @@
+$max-width-mobile: 767px;
+$max-width-tablet: 992px;
+$max-width-desktop: 1199px;
+$max-width-largedesktop: 1500px;
+$max-width-XL: 2000px;
+$min-width-XXL: 2001px;
+
+/*
+ * Responsive breakpoint mixins
+ */
+@mixin mobile {
+  @media only screen and (max-width: $max-width-mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: $max-width-tablet) {
+    @content;
+  }
+}
+@mixin tablet-only {
+  @media only screen and (min-width: $max-width-mobile + 1) and (max-width: $max-width-tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: $max-width-desktop) {
+    @content;
+  }
+}
+@mixin desktop-only {
+  @media only screen and (min-width: $max-width-tablet + 1) and (max-width: $max-width-desktop) {
+    @content;
+  }
+}
+@mixin large-desktop {
+  @media only screen and (max-width: $max-width-largedesktop) {
+    @content;
+  }
+}
+@mixin XL {
+  @media only screen and (max-width: $max-width-XL) {
+    @content;
+  }
+}
+
+@mixin XXL {
+  @media only screen and (min-width: $min-width-XXL) {
+    @content;
+  }
+}
+
+/*
+ *   Responsive Helper classes
+ */
+@include mobile {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@include tablet {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@include desktop-only {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@include large-desktop {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@include XL {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@include XXL {
+  .hidden-desktop {
+    display: none !important;
+  }
+}

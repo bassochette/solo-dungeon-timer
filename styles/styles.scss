@@ -1,0 +1,67 @@
+@import 'fonts';
+@import 'colors';
+@import 'responsive';
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  font-family: 'Source Sans Pro';
+  color: $primary-text-color;
+  overflow-x: auto;
+}
+
+@include XXL {
+  body {
+    font-size: 36px;
+  }
+}
+
+@include XL {
+  body {
+    font-size: 18px;
+  }
+}
+
+@include large-desktop {
+  body {
+    font-size: 14px;
+  }
+}
+
+@include desktop {
+  body {
+    font-size: 13px;
+  }
+}
+
+@include tablet {
+  body {
+    font-size: 12px;
+  }
+}
+
+@include mobile {
+  body {
+    font-size: 10px;
+  }
+}
+
+#_next,
+.app {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+section,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
