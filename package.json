@@ -46,7 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "13.2.1",
     "@commitlint/config-conventional": "13.2.0",
-    "@testing-library/react": "12.1.2",
+    "@testing-library/react": "12.1.5",
     "@types/jest": "27.0.3",
     "@types/node": "14.17.34",
     "@types/react": "17.0.37",
